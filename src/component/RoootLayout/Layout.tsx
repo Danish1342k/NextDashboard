@@ -1,21 +1,23 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import Navbar from "../Navbar/Navbar";
 import { Grid, GridItem, Text } from "@chakra-ui/react";
 import Sidebar from "../Sidebar/Sidebar";
 import Footer from "../Footer/Footer";
 
-const Layout = ({ children }) => {
+const Layout = ({ children }: { children: ReactNode }) => {
   return (
     <Grid templateColumns="repeat(6, 1fr)" bg="gray.50">
       <GridItem
+        w="300px"
         as="aside"
-        minW="80"
+        // minW="80"
         colSpan={{ base: 6, lg: 1, xl: 1 }}
         bg="#fff"
         color="black"
         minHeight={{ lg: "100vh" }}
         pt="4"
         display={{ base: "none", md: "none", lg: "block" }}
+        boxShadow="rgba(112, 144, 176, 0.08) 14px 17px 40px 4px"
       >
         <Sidebar />
       </GridItem>

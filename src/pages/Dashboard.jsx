@@ -52,9 +52,9 @@ const cardData = [
   },
 ];
 
-const RtlAdmin = () => {
+const mainDashboard = () => {
   return (
-    <Box dir="rtl">
+    <>
       <Layout>
         <Head>
           <title>Horizon</title>
@@ -136,16 +136,16 @@ const RtlAdmin = () => {
           </Flex>
         </main>
       </Layout>
-    </Box>
+    </>
   );
 };
-export default RtlAdmin;
+export default mainDashboard;
 
 // export async function getServerSideProps() {
 //   return {
 //     redirect: {
 //       permanent: false,
-//       destination: "/Sign",
+//       destination: "/sign",
 //     },
 //   };
 // }

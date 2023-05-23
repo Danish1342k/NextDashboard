@@ -1,14 +1,15 @@
 import React from "react";
 import { Box } from "@chakra-ui/react";
+import Layout from "../component/RoootLayout/Layout";
+import DataTable from "../component/DataTable/DataTable";
 
-
-export default function DataTable() {
+const dataTable = () => {
   return (
-    <Box pt="4">
-      <Box bg="green" w="100%" p={4} color="white">
-        Data Table
+    <Layout>
+      <Box pt="4">
+        <DataTable />
       </Box>
-    </Box>
-    
+    </Layout>
   );
-}
+};
+export default dataTable;

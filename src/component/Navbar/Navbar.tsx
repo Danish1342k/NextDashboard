@@ -40,22 +40,23 @@ const Navbar = () => {
           px="6"
           width="100%"
           justifyContent="space-between"
+          flexDirection={{ base: "column", md: "row" }}
           borderRadius="2xl"
         >
           <Flex flexDirection="column">
             <Breadcrumb>
-              <BreadcrumbItem color="gray">
+              <BreadcrumbItem color="#2d3748" fontSize="sm">
                 <BreadcrumbLink href="#">Home</BreadcrumbLink>
               </BreadcrumbItem>
 
-              <BreadcrumbItem color="gray">
+              <BreadcrumbItem color="#2d3748" fontSize="sm">
                 <BreadcrumbLink href="#">Main Dashboard</BreadcrumbLink>
               </BreadcrumbItem>
             </Breadcrumb>
             <Heading
-              fontSize="34px"
-              fontWeight="bold"
               color="#1b254b"
+              fontWeight="bold"
+              fontSize="4xl"
               cursor="pointer"
             >
               Main Dashboard
@@ -67,7 +68,7 @@ const Navbar = () => {
             borderRadius="30px"
             alignItems="center"
             justifyContent="space-between"
-            gridGap="4"
+            // gridGap="4"
             p="2"
           >
             <Box>
@@ -94,18 +95,33 @@ const Navbar = () => {
                 />
               </InputGroup>
             </Box>
-            <Stack direction={["column", "row"]} spacing="10px">
-              <Box w="5" h="10" color="#a0aec0">
-                <IconButton aria-label="Search database" icon={<BellIcon />} />
-              </Box>
-              <Box w="5" h="10" color="#a0aec0">
+            <Stack
+              flexDirection={{ base: "row", md: "row" }}
+              // w={{ base: "100%", md: "none" }}
+              justifyContent={{ base: "space-between", md: "none" }}
+              alignItems="end"
+              spacing="10px"
+            >
+              <Box h="10" color="#a0aec0" mt="0">
                 <IconButton
+                  bgColor="#fff"
+                  aria-label="Search database"
+                  icon={<BellIcon />}
+                />
+              </Box>
+              <Box h="10" color="#a0aec0">
+                <IconButton
+                  bgColor="#fff"
                   aria-label="Search database"
                   icon={<InfoOutlineIcon />}
                 />
               </Box>
-              <Box w="5" h="10" color="#a0aec0">
-                <IconButton aria-label="Search database" icon={<LinkIcon />} />
+              <Box h="10" color="#a0aec0">
+                <IconButton
+                  bgColor="#fff"
+                  aria-label="Search database"
+                  icon={<LinkIcon />}
+                />
               </Box>
               <Circle size="40px" bg="rgb(17 0 123)" color="white">
                 <Text>AP</Text>

@@ -46,7 +46,7 @@ const Cards = () => {
               </Flex>
             </Flex>
             <Grid templateColumns="repeat(3, 1fr)" gap={4}>
-              <Card mt="5" bgColor="#fff">
+              <Card shadow="none" mt="5" bgColor="#fff">
                 <CardBody>
                   <Image
                     src="https://horizon-ui.com/horizon-ui-chakra/static/media/Nft1.0fea34cca5aed6cad72b.png"
@@ -111,12 +111,21 @@ const Cards = () => {
                   </Stack>
                 </CardBody>
                 <CardFooter>
-                  <Button variant="solid" bgColor="#11047a" borderRadius="full">
+                  <Button
+                    py="5px"
+                    color="#fff"
+                    bgColor="#11047a"
+                    fontSize="sm"
+                    borderRadius="full"
+                    w="80%"
+                    boxShadow="rgba(112, 144, 176, 0.08) 45px 76px 113px 7px"
+                    _hover={{ background: "#11047a" }}
+                  >
                     Place Bid
                   </Button>
                 </CardFooter>
               </Card>
-              <Card mt="5" bgColor="#fff">
+              <Card shadow="none" mt="5" bgColor="#fff">
                 <CardBody>
                   <Image
                     src="https://horizon-ui.com/horizon-ui-chakra/static/media/Nft1.0fea34cca5aed6cad72b.png"
@@ -185,7 +194,7 @@ const Cards = () => {
                   </Button>
                 </CardFooter>
               </Card>
-              <Card mt="5" bgColor="#fff">
+              <Card shadow="none" mt="5" bgColor="#fff">
                 <CardBody>
                   <Image
                     src="https://horizon-ui.com/horizon-ui-chakra/static/media/Nft1.0fea34cca5aed6cad72b.png"
@@ -263,7 +272,7 @@ const Cards = () => {
               </Text>
             </Box>
             <Grid templateColumns="repeat(3, 1fr)" gap={4}>
-              <Card mt="5" bgColor="#fff">
+              <Card shadow="none" mt="5" bgColor="#fff">
                 <CardBody>
                   <Image
                     src="https://horizon-ui.com/horizon-ui-chakra/static/media/Nft1.0fea34cca5aed6cad72b.png"
@@ -333,7 +342,7 @@ const Cards = () => {
                   </Button>
                 </CardFooter>
               </Card>
-              <Card mt="5" bgColor="#fff">
+              <Card shadow="none" mt="5" bgColor="#fff">
                 <CardBody>
                   <Image
                     src="https://horizon-ui.com/horizon-ui-chakra/static/media/Nft1.0fea34cca5aed6cad72b.png"
@@ -402,7 +411,7 @@ const Cards = () => {
                   </Button>
                 </CardFooter>
               </Card>
-              <Card mt="5" bgColor="#fff">
+              <Card shadow="none" mt="5" bgColor="#fff">
                 <CardBody>
                   <Image
                     src="https://horizon-ui.com/horizon-ui-chakra/static/media/Nft1.0fea34cca5aed6cad72b.png"

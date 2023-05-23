@@ -25,18 +25,23 @@
     "chart.js": "2.9.4",
     "eslint": "8.39.0",
     "eslint-config-next": "13.3.4",
+    "formik": "^2.2.9",
     "framer-motion": "^10.12.7",
     "i": "^0.3.7",
+    "install": "^0.13.0",
     "moment": "^2.29.4",
     "next": "12",
+    "npm": "^9.6.7",
     "react": "^18.2.0",
     "react-calendar": "^4.2.1",
     "react-chartjs-2": "^5.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.8.0",
     "react-icons-kit": "^2.0.0",
+    "react-router-dom": "^6.11.2",
     "react-widgets": "^5.8.4",
     "recharts": "^2.6.0",
-    "typescript": "5.0.4"
+    "typescript": "5.0.4",
+    "yup": "^1.1.1"
   }
 }

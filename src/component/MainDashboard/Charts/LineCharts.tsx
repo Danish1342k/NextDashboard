@@ -10,6 +10,10 @@ import {
   Legend,
   ResponsiveContainer,
 } from "recharts";
+import { faChartLine } from "@fortawesome/free-solid-svg-icons";
+import { Box, Button, Circle, Flex, Heading, Text } from "@chakra-ui/react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { CalendarIcon } from "@chakra-ui/icons";
 
 const data = [
   {
@@ -59,45 +63,85 @@ const LineCharts = (props: any) => {
   const { ...rest } = props;
   return (
     <BoxLayout {...rest} py="4" mt="20px">
-      <ResponsiveContainer width="100%" height={500}>
-        <LineChart
-          //   width={300}
-          //   height={500}
-          data={data}
-          margin={{
-            top: 5,
-            right: 30,
-            left: 20,
-            bottom: 5,
-          }}
+      <Flex justifyContent="space-between" p="4" overflowX="auto">
+        <Button
+          leftIcon={<CalendarIcon />}
+          bgColor="#f4f7fe"
+          color="#a3aed0"
+          variant="solid"
         >
-          <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="name" />
-          <YAxis />
-          <Tooltip />
-          <Legend />
-          <Line
-            type="monotone"
-            dataKey="pv"
-            stroke="#8884d8"
-            activeDot={{ r: 8 }}
-          />
-          <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
-        </LineChart>
-      </ResponsiveContainer>
-      {/* <style jsx>{`
-        @media only screen and (min-width: 768px) {
-          .recharts-responsive-container {
-            width: 80%;
-          }
-        }
-
-        @media only screen and (min-width: 992px) {
-          .recharts-responsive-container {
-            width: 60%;
-          }
-        }
-      `}</style> */}
+          This month
+        </Button>
+        <Circle
+          w="40px"
+          h="40px"
+          bg="#f4f7fe"
+          color="white"
+          alignItems="center"
+          justifyContent="center"
+          fontSize="1xl"
+          borderRadius="2xl"
+          // px="4"
+        >
+          <FontAwesomeIcon color="#422afb" icon={faChartLine} />
+        </Circle>
+      </Flex>
+      <Flex w="100%">
+        <Box p="4">
+          <Heading
+            color="#1b2559"
+            fontSize="3xl"
+            fontWeight="bold"
+            lineHeight="100%"
+          >
+            $37.5K
+          </Heading>
+          <Flex w="132px">
+            <Text
+              color="gray.600"
+              fontSize="sm"
+              fontWeight="medium"
+              lineHeight="100%"
+              mt="4px"
+              mr="2"
+            >
+              Total Spent
+            </Text>
+            <Text color="green.500" fontSize="sm" fontWeight="bold">
+              +2.45%
+            </Text>
+          </Flex>
+          <Text color="green.500" fontSize="md" fontWeight="bold">
+            On track
+          </Text>
+        </Box>
+        <ResponsiveContainer width="80%" height={250}>
+          <LineChart
+            //   width={300}
+            //   height={500}
+            data={data}
+            margin={{
+              top: 5,
+              right: 30,
+              left: 20,
+              bottom: 5,
+            }}
+          >
+            <CartesianGrid strokeDasharray="3 3" />
+            <XAxis dataKey="name" />
+            <YAxis />
+            <Tooltip />
+            <Legend />
+            <Line
+              type="monotone"
+              dataKey="pv"
+              stroke="#8884d8"
+              activeDot={{ r: 8 }}
+            />
+            <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
+          </LineChart>
+        </ResponsiveContainer>
+      </Flex>
     </BoxLayout>
   );
 };

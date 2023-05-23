@@ -56,26 +56,42 @@ const tablesTask = [
 const Tables = (props: any) => {
   const { ...rest } = props;
   return (
-    <BoxLayout {...rest} mt="20px" p="4">
-      <Flex justifyContent="space-between">
-        <Text color="gray.900" fontSize="22px" fontWeight="600">
+    <BoxLayout {...rest} mt="20px" py="4" overflowX="auto">
+      <Flex justifyContent="space-between" p="4">
+        <Text color="gray.900" fontSize="xl" fontWeight="bold">
           Check Table
         </Text>
         <Menu>
-          <MenuButton px="4" bg="#f4f7fe" color="#422afb" borderRadius="4">
+          <MenuButton
+            w="37px"
+            h="37px"
+            bg="#f4f7fe"
+            color="#422afb"
+            borderRadius="4"
+            fontSize="3xl"
+            pb="4"
+          >
             ...
           </MenuButton>
           <Portal>
-            <MenuList bg="#fff" color="black">
-              <MenuItem bg="#fff">Panel 1</MenuItem>
-              <MenuItem bg="#fff">Panel 2</MenuItem>
-              <MenuItem bg="#fff">Panel 3</MenuItem>
-              <MenuItem bg="#fff">Panel 4</MenuItem>
+            <MenuList bg="#fff">
+              <MenuItem bg="#fff" color="gray.900">
+                Panel 1
+              </MenuItem>
+              <MenuItem bg="#fff" color="gray.900">
+                Panel 2
+              </MenuItem>
+              <MenuItem bg="#fff" color="gray.900">
+                Panel 3
+              </MenuItem>
+              <MenuItem bg="#fff" color="gray.900">
+                Panel 4
+              </MenuItem>
             </MenuList>
           </Portal>
         </Menu>
       </Flex>
-      <Table whiteSpace="nowrap" color="black">
+      <Table my="7" whiteSpace="nowrap" color="black">
         <Thead>
           <Tr>
             <Th border="none">Name</Th>
@@ -84,20 +100,48 @@ const Tables = (props: any) => {
             <Th border="none">Date</Th>
           </Tr>
         </Thead>
+
         <Tbody justifyContent="center">
-          {tablesTask.map((tablesTask) => (
-            <Tr key={tablesTask}>
-              <Td p="10px" border="none" display="flex">
+          {tablesTask.map((tablesTask, i) => (
+            <Tr key={i}>
+              <Td
+                p="10px"
+                border="none"
+                display="flex"
+                color="gray.900"
+                fontWeight="bold"
+                fontSize="sm"
+              >
                 <Checkbox defaultChecked mx="10px"></Checkbox>
                 {tablesTask.Name}
               </Td>
-              <Td p="10px" border="none">
+              <Td
+                p="10px"
+                border="none"
+                color="gray.900"
+                fontWeight="bold"
+                fontSize="sm"
+                textAlign="center"
+              >
                 {tablesTask.Progress}
               </Td>
-              <Td p="10px" border="none">
+              <Td
+                p="10px"
+                border="none"
+                color="gray.900"
+                fontWeight="bold"
+                fontSize="sm"
+                textAlign="center"
+              >
                 {tablesTask.Quantity}
               </Td>
-              <Td p="10px" border="none">
+              <Td
+                p="10px"
+                border="none"
+                color="gray.900"
+                fontWeight="bold"
+                fontSize="sm"
+              >
                 {tablesTask.Date}
               </Td>
             </Tr>

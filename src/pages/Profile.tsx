@@ -1,14 +1,20 @@
 import React from "react";
 import { Box } from "@chakra-ui/react";
+import ProfileCard from "../component/Profile/ProfileCard";
+import SecondProfileCard from "../component/Profile/SecondProfileCard";
+import NotificationCard from "../component/Profile/NotificationCard";
+import Layout from "@/component/RoootLayout/Layout";
 
 function Profile() {
   return (
     <div>
-      <Box pt="4">
-        <Box bg="orange" w="100%" p={4} color="white">
-          Profile
+      <Layout>
+        <Box>
+          <ProfileCard />
+          <SecondProfileCard />
+          <NotificationCard />
         </Box>
-      </Box>
+      </Layout>
     </div>
   );
 }

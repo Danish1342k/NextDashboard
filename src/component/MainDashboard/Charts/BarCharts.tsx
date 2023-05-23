@@ -1,5 +1,5 @@
 import React from "react";
-import { Box } from "@chakra-ui/react";
+import { Circle, Flex, Text } from "@chakra-ui/react";
 import {
   BarChart,
   Bar,
@@ -12,6 +12,9 @@ import {
   ResponsiveContainer,
 } from "recharts";
 import BoxLayout from "@/component/BoxLayout/BoxLayout";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChartLine } from "@fortawesome/free-solid-svg-icons";
+
 const data = [
   {
     name: "17",
@@ -79,7 +82,30 @@ const BarCharts = (props: any) => {
       py="4"
       mt="20px"
     >
-      <ResponsiveContainer width="100%" height={500}>
+      <Flex
+        justifyContent="space-between"
+        alignItems="center"
+        p="4"
+        overflowX="auto"
+      >
+        <Text color="#1b2559" fontSize="xl" lineHeight="100%" fontWeight="bold">
+          Weekly Revenue
+        </Text>
+        <Circle
+          w="40px"
+          h="40px"
+          bg="#f4f7fe"
+          color="white"
+          alignItems="center"
+          justifyContent="center"
+          fontSize="1xl"
+          borderRadius="2xl"
+          // px="4"
+        >
+          <FontAwesomeIcon color="#422afb" icon={faChartLine} />
+        </Circle>
+      </Flex>
+      <ResponsiveContainer width="100%" height={250}>
         <BarChart
           //   width={300}
           //   height={500}

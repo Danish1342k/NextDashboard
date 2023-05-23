@@ -1,5 +1,6 @@
 import React from "react";
 import { Box, Flex, Text } from "@chakra-ui/react";
+import { TriangleUpIcon } from "@chakra-ui/icons";
 import { BarChart, Bar, ResponsiveContainer } from "recharts";
 import BoxLayout from "../../BoxLayout/BoxLayout";
 const data = [
@@ -67,12 +68,18 @@ const BarChartsTwo = (props: any) => {
           </Flex>
         </Box>
         <Box>
-          <Text color="green.500" fontWeight="700" fontSize="sm">
+          <Flex
+            alignItems="center"
+            color="green.500"
+            fontWeight="700"
+            fontSize="sm"
+          >
+            <TriangleUpIcon />
             +2.45%
-          </Text>
+          </Flex>
         </Box>
       </Flex>
-      <ResponsiveContainer width="100%" height={200}>
+      <ResponsiveContainer width="100%" height={290}>
         <BarChart data={data}>
           <Bar dataKey="uv" fill="#7655ff" />
         </BarChart>

@@ -54,7 +54,7 @@ const cardData = [
 
 const HistoryCards = () => {
   return (
-    <Card mt="6">
+    <Card shadow="none" mt="6">
       <Flex
         bgColor="#fefeff"
         p="4"

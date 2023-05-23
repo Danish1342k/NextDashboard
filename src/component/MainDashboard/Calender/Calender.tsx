@@ -1,13 +1,19 @@
-import React, { useState } from "react";
-import { Box } from "@chakra-ui/react";
+import React from "react";
 import Calendar from "react-widgets/Calendar";
 import "react-widgets/styles.css";
-const Calender = () => {
+import BoxLayout from "../../BoxLayout/BoxLayout";
+const Calender = (props: any) => {
+  const { ...rest } = props;
+
   return (
     <>
-      <Box color="white" p="4" my="5" boxShadow="md" borderRadius="6" bg="#fff">
-        <Calendar max={new Date()} />;
-      </Box>
+      <BoxLayout {...rest} p="4" my="5" h="335px">
+        <Calendar
+          // max={new Date()}
+          // bordered="none"
+          style={{ border: "none" }}
+        />
+      </BoxLayout>
     </>
   );
 };

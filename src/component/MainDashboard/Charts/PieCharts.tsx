@@ -1,5 +1,7 @@
 import React from "react";
 import BoxLayout from "../../BoxLayout/BoxLayout";
+import { ChevronDownIcon } from "@chakra-ui/icons";
+
 import {
   Box,
   Flex,
@@ -8,6 +10,8 @@ import {
   MenuItem,
   MenuList,
   Text,
+  Card,
+  Divider,
 } from "@chakra-ui/react";
 import { PieChart, Pie, Sector, Cell, ResponsiveContainer } from "recharts";
 
@@ -31,8 +35,14 @@ const PieCharts = (props: any) => {
           </Text>
         </Box>
         <Menu>
-          <MenuButton fontWeight="600" fontSize="sm" color="gray.600">
+          <MenuButton
+            alignItems="center"
+            fontWeight="600"
+            fontSize="sm"
+            color="gray.600"
+          >
             Monthly
+            <ChevronDownIcon />
           </MenuButton>
           <MenuList bg="#fff">
             <MenuItem bg="#fff" color="black">
@@ -47,7 +57,7 @@ const PieCharts = (props: any) => {
           </MenuList>
         </Menu>
       </Flex>
-      <ResponsiveContainer width="100%" height={250}>
+      <ResponsiveContainer width="100%" height={260}>
         <PieChart>
           <Pie
             data={data}
@@ -68,6 +78,33 @@ const PieCharts = (props: any) => {
           </Pie>
         </PieChart>
       </ResponsiveContainer>
+      <BoxLayout
+        {...rest}
+        border="none"
+        shadow="rgba(112, 144, 176, 0.12) 0px 18px 40px"
+        bgColor="#fff"
+        p="4"
+        display="flex"
+        justifyContent="space-between"
+      >
+        <Box>
+          <Text color="gray.600" fontWeight="bold" fontSize="sx">
+            Your files
+          </Text>
+          <Text color="gray.900" fontWeight="bold" fontSize="lg">
+            63%
+          </Text>
+        </Box>
+        <Divider w="1px" h="50px" bgColor="rgba(135, 140, 189, 0.3)" />
+        <Box>
+          <Text color="gray.600" fontWeight="bold" fontSize="sx">
+            Sysytem
+          </Text>
+          <Text color="gray.900" fontWeight="bold" fontSize="lg">
+            10%
+          </Text>
+        </Box>
+      </BoxLayout>
     </BoxLayout>
   );
 };

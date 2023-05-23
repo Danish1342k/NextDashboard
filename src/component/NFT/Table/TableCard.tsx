@@ -60,7 +60,7 @@ const tablesTask = [
 
 const TableCard = () => {
   return (
-    <Box bgColor="#f8fafb" w="100%" borderRadius="3xl">
+    <Box shadow="none" bgColor="#f8fafb" w="100%" borderRadius="3xl">
       <Flex
         bgColor="#fefeff"
         p="4"
@@ -92,8 +92,8 @@ const TableCard = () => {
             </Tr>
           </Thead>
           <Tbody alignItems="center">
-            {tablesTask.map((tablesTask) => (
-              <Tr key={tablesTask}>
+            {tablesTask.map((tablesTask, i) => (
+              <Tr key={i}>
                 <Td
                   px="2"
                   border="none"
